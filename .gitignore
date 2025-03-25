@@ -1,0 +1,6 @@
+# JetBrains IDE files
+.idea/
+
+# CLion build directories
+cmake-build-debug/
+cmake-build-release/
