@@ -4,3 +4,8 @@
 # CLion build directories
 cmake-build-debug/
 cmake-build-release/
+
+# Vendor submodules (Only keep CMakeLists and README files)
+vendor/**
+!vendor/CMakeLists.txt
+!vendor/README.md
