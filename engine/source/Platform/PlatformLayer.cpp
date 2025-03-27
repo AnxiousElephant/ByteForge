@@ -19,6 +19,7 @@ namespace BF::Platform
         SDL_QuitSubSystem(SDL_INIT_EVENTS);
         SDL_QuitSubSystem(SDL_INIT_SENSOR);
         SDL_QuitSubSystem(SDL_INIT_CAMERA);
+
         SDL_Quit();
     }
 }

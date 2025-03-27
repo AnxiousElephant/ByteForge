@@ -2,17 +2,17 @@
 
 namespace BF::Platform::Detection
 {
-    constexpr int MAX_DISPLAY_COUNT = 5;
-    constexpr int MAX_PLAYBACK_AUDIO_DEVICE_COUNT = 10;
-    constexpr int MAX_RECORDING_AUDIO_DEVICE_COUNT = 10;
-    constexpr int MAX_GAMEPAD_COUNT = 4;
-    constexpr int MAX_JOYSTICK_COUNT = 4;
-    constexpr int MAX_CAMERA_COUNT = 2;
+    constexpr int MAX_DISPLAY_COUNT = 3;
+    constexpr int MAX_PLAYBACK_AUDIO_DEVICE_COUNT = 3;
+    constexpr int MAX_RECORDING_AUDIO_DEVICE_COUNT = 3;
+    constexpr int MAX_GAMEPAD_COUNT = 2;
+    constexpr int MAX_JOYSTICK_COUNT = 2;
+    constexpr int MAX_CAMERA_COUNT = 1;
 
     enum PlatformDisplayOrientation
     {
-        Portrait,
-        Landscape
+        PlatformDisplayOrientationPortrait,
+        PlatformDisplayOrientationLandscape
     };
 
     struct PlatformEnvironmentInfo

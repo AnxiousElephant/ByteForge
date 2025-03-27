@@ -1,19 +1,33 @@
 #include "ByteForgeEngine/ByteForgeApplication.h"
-#include "Platform/PlatformLayer.h"
-#include "Platform/Detection/PlatformDetector.h"
+
+#include "Core/Configuration/ConfigurationManager.h"
+#include "Platform/Window/WindowManager.h"
 
 namespace BF
 {
     void ByteForgeApplication::Initialize(const int argc, char* argv[])
     {
-        Platform::PlatformLayer::Initialize();
+        // For now, all the code in this method is based on testing the engine.
 
-        Platform::Detection::PlatformEnvironmentInfo environmentInfo = Platform::Detection::PlatformDetector::GetEnvironmentInfo();
-        Platform::Detection::PlatformMemoryInfo memoryInfo = Platform::Detection::PlatformDetector::GetMemoryInfo();
-        Platform::Detection::PlatformCPUInfo cpuInfo = Platform::Detection::PlatformDetector::GetCPUInfo();
-        Platform::Detection::PlatformDisplayInfo displayInfo = Platform::Detection::PlatformDetector::GetDisplayInfo();
-        Platform::Detection::PlatformAudioInfo audioInfo = Platform::Detection::PlatformDetector::GetAudioInfo();
+        const Core::Configuration::PlatformSettingsSchema platformSettings = Core::Configuration::ConfigurationManager::LoadPlatformSettings();
 
-        Platform::PlatformLayer::Shutdown();
+        const auto* windowManager = new Platform::Window::WindowManager();
+
+        const bool windowCreated = windowManager->CreateWindow(
+            platformSettings.windowSettings.title,
+            platformSettings.windowSettings.width,
+            platformSettings.windowSettings.height,
+            platformSettings.windowSettings.isFullscreen
+        );
+
+        if (windowCreated)
+        {
+            while (windowManager->PollEvents())
+            {
+
+            }
+        }
+
+        delete windowManager;
     }
 }

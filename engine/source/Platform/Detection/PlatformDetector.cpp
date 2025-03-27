@@ -43,7 +43,7 @@ namespace BF::Platform::Detection
                 PlatformDisplayData& displayData = displayInfo.displaysData[i];
 
                 displayData.name = SDL_GetDisplayName(displays[i]);
-                displayData.orientation = SDL_GetCurrentDisplayOrientation(displays[i]) == SDL_ORIENTATION_LANDSCAPE ? Landscape : Portrait;
+                displayData.orientation = SDL_GetCurrentDisplayOrientation(displays[i]) == SDL_ORIENTATION_LANDSCAPE ? PlatformDisplayOrientationLandscape : PlatformDisplayOrientationPortrait;
 
                 SDL_Rect displayBounds, displayUsableBounds;
 

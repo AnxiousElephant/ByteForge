@@ -1,16 +1,11 @@
 # ByteForge - Roadmap 🚀
 
-## 🎯 Current Focus: Establishing foundational systems for engine configuration and window management
+## 🎯 Current Focus: <sub>`🟡 Refactoring...`</sub>
 
-## 🔄 Implementation Flow
+## 🔄 Implementation Flow: <sub>`🟡 In Planning`</sub>
 
 <div style="font-size: 1.1em; margin-left: 20px;">
-
-- File system abstraction for cross-platform file management
-- INI file parser
-- Configuration manager
-- Window management system
-
+    
 </div>
 
 | Layer                      | Submodules              | Status         |
@@ -30,14 +25,14 @@
 |                            | RTTI/Reflection         | 🟡 In Planning |
 |                            | Localization            | 🟡 In Planning |
 |                            | Video Player            | 🟡 In Planning |
-|                            | Data Parsers (.ini)     | 🔵 In Progress |
+|                            | Data Parsers (.ini)     | 🟢 Stable      |
 |                            | Profiling               | 🟡 In Planning |
-|                            | Configuration Manager   | 🔵 In Progress |
+|                            | Configuration           | 🟢 Stable      |
+|                            | Strings                 | 🟢 Stable      |
 |                            | Random Number Generator | 🟡 In Planning |
-|                            | Async File I/O          | 🟡 In Planning |
-| 🖥️ **Platform Layer**     | Platform Detection      | 🟢 Stable      |
-|                            | File System             | 🔵 In Progress |
-|                            | Window Management       | 🔵 In Progress |
+| 🖥️ **Platform Layer**     | Detection               | 🟢 Stable      |
+|                            | IO - File System        | 🟢 Stable      |
+|                            | Window                  | 🟢 Stable      |
 |                            | Threading               | 🟡 In Planning |
 |                            | Hi-Res Timer            | 🟡 In Planning |
 |                            | Networking              | 🟡 In Planning |
